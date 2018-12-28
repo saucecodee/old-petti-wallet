@@ -19,19 +19,17 @@
 
   <ion-card padding class="form">
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-4>
         <select name="" id="">
           <option value="1">Credit</option>
           <option value="0">Debit</option>
         </select>
       </ion-col>
-      <ion-col col-6>
+      <ion-col col-8>
         <input type="number" placeholder="Enter amount" style="padding: 10px;">
       </ion-col>
-      <ion-col col-3>
-        <button class="ok">Ok</button>
-      </ion-col>
     </ion-row>
+    <button class="ok">Ok</button>
   </ion-card>
 
   <!-- <ion-card padding *ngFor="let item of items" class="trans">
@@ -43,22 +41,23 @@
   <ion-list padding no-lines>
       <ion-item-sliding *ngFor="let item of items" class="trans">
         <ion-item>
-            <p>December 21, 2018</p>  
-            <h1><s>N</s>{{item}}</h1>
+          <div>
+            <p style="display: inline">December 21, 2018</p> 
+            <span class="type">CREDIT</span>
+            <span class="status"><ion-icon name="radio-button-on"></ion-icon></span> 
+          </div>  
+          <h1><s>N</s>{{item}}</h1>
         </ion-item>
 
         <ion-item-options side="right">
-          <button ion-button color="danger">
-            <ion-icon name="mail"></ion-icon>
-            Email
+          <button ion-button color="danger" icon-only>
+            <ion-icon name="create"></ion-icon>
           </button>
-          <button ion-button color="primary">
-            <ion-icon name="text"></ion-icon>
-            Text
+          <button ion-button color="primary" icon-only>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
           </button>
-          <button ion-button color="secondary">
-            <ion-icon name="call"></ion-icon>
-            Call
+          <button ion-button color="secondary" icon-only>
+            <ion-icon color="light" name="information-circle"></ion-icon>
           </button>
         </ion-item-options>
 
